@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Desafio JSF</title>
+</h:head>
+
+<h:body>
+    <p:panel header="Defafio - JSF">
+        <h:panelGrid columns="2" cellpadding="4">
+            <h:outputText value="Nome: "/>
+            <h:outputText value="#{pesquisaPessoasBean.getPessoa().getNome()}"/>
+
+            <h:outputText value="Matricula: "/>
+            <h:outputText value="#{pesquisaPessoasBean.getPessoa().getMatricula()}"/>
+
+        </h:panelGrid>
+    </p:panel>
+
+    <p:dataTable var="pessoa" value="#{pesquisaPessoasBean.getPessoas()}">
+        <p:column headerText="Nome">
+            <h:outputText value="#{pessoa.nome}"/>
+        </p:column>
+
+        <p:column headerText="Matricula">
+            <h:outputText value="#{pessoa.matricula}"/>
+        </p:column>
+
+    </p:dataTable>
+</h:body>
+</html>
