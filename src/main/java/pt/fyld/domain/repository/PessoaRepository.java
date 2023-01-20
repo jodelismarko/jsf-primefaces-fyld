@@ -1,9 +1,7 @@
-package pt.fyld.repository;
+package pt.fyld.domain.repository;
 
-import pt.fyld.model.Pessoa;
+import pt.fyld.domain.entity.Pessoa;
 
-import javax.enterprise.inject.New;
-import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
